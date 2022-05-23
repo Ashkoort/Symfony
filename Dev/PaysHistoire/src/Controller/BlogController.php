@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
 {
+    
     /**
      * @Route("/blog", name="blog")
      */
@@ -18,9 +19,17 @@ class BlogController extends AbstractController
         ]);
     }
     /**
-     * @route("/", name="home")
+     * @Route("/", name="home")
      */
     public function home(){
         return $this->render('blog/home.html.twig');
+    }
+
+    /**
+     * @Route("/blog/France", name="PaysFrance")
+     */
+    public function France()
+    {
+        return $this->render('blog/PaysFrance.html.twig');
     }
 }
